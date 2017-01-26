@@ -8,6 +8,12 @@ Description: MoThis package has been built to visulaize US FARS (Fatality Analys
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Imports:
+    dplyr,
+    graphics,
+    maps,
+    readr,
+    tidyr
 RoxygenNote: 5.0.1
 Suggests: knitr,
     rmarkdown,

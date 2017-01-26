@@ -38,13 +38,12 @@ fars_read <- function(filename) {
 #' @param year a integer representing the year for which the file name to be generated
 #'
 #' @return this function returns the  accident file name for a particular year given as input
-#'
+#' @export
 #'  @examples
 #'  \dontrun{
 #'  make_filename(1992)
 #'  make_filename("2012")
 #'  }
-#' @export
 #'
 make_filename <- function(year) {
   year <- as.integer(year)

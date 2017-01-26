@@ -2,31 +2,28 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_map_state}
 \alias{fars_map_state}
-\title{Plot Accidents for a State}
+\title{Draws the location of accidents in given state for a given year}
 \usage{
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{state.num}{a numeric code for a state(e.g 5 or 6)}
+\item{state.num}{An integer that represents the state number}
 
-\item{year}{accident year}
+\item{year}{An integer or string}
 }
 \value{
-a map plotting the accidents for the given state in an input year
+plots a map of the state with the accidents as dots on the map.
+It throws an error if \code{"state.num"} is not invalid. If there hasn't been
+any accident in that year, it produces a message.
 }
 \description{
-This function plot the accidents for a state given as a input
-}
-\section{Warning}{
-
-Dont enter the invalid state or year,else function will generate an error.
+Draws the location of accidents in given state for a given year
 }
 \examples{
-\dontrun{
-fars_map_state(1,2015)
-fars_map_state(6,2013)
-fars_map_state(2,2013) #2 is invalid state
-}
-
+  \dontrun{
+    fars_map_state(48, 2013)
+    fars_map_state(48, 2014)
+    fars_map_state(6, 2013)
+  }
 }
 

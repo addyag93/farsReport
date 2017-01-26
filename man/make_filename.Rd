@@ -2,31 +2,28 @@
 % Please edit documentation in R/fars_functions.R
 \name{make_filename}
 \alias{make_filename}
-\title{Generate File name from the US National Highway Traffic Safety
+\title{Generate file names for data files from the US National Highway Traffic Safety
 Administration's Fatality Analysis Reporting System
-\href{http://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System (FARS)}.
-This function generates the accident file name for a particular year taken as input. Entering other
-than integer may throw a warning}
+\href{http://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System (FARS)}.}
 \usage{
 make_filename(year)
 }
 \arguments{
-\item{year}{a integer representing the year for which the file name to be generated}
+\item{year}{An integer or string indicating the year that the data file generated}
 }
 \value{
-this function returns the  accident file name for a particular year given as input
-
- @examples
- \dontrun{
+an string as the name of the file
+}
+\description{
+Generate file names for data files from the US National Highway Traffic Safety
+Administration's Fatality Analysis Reporting System
+\href{http://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System (FARS)}.
+}
+\examples{
+\dontrun{
  make_filename(1992)
  make_filename("2012")
  }
-}
-\description{
-Generate File name from the US National Highway Traffic Safety
-Administration's Fatality Analysis Reporting System
-\href{http://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System (FARS)}.
-This function generates the accident file name for a particular year taken as input. Entering other
-than integer may throw a warning
+
 }
 

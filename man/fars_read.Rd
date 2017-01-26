@@ -2,25 +2,24 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_read}
 \alias{fars_read}
-\title{Reads a  CSV File}
+\title{Data Input}
 \usage{
 fars_read(filename)
 }
 \arguments{
-\item{filename}{a charater string giving the file that function will read}
+\item{filename}{the name of the file which the data are to be read from.}
 }
 \value{
-this function returns the data frame
+returns a data frame table if the file exists, throws an error if the file
+  doesn't exist. If the filename does not contain an absolute path, the filename
+  is relative to the current working directory, \code{getwd()}.
 }
 \description{
-This is a simple function that takes a file name as a input , check for existence,
-if yes read that csv file and convert it into a data frame. If file doesnot exist, it will
-return an error.
+Reads a file in table format and creates a data frame table from it.
 }
 \examples{
 \dontrun{
-fars_read("student_data.csv")
-fars_read("accident_2013.csv.bz2")
+  fars_read("accident_2013.csv.bz2")
 }
 
 }

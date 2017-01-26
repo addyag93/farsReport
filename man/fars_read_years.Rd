@@ -2,27 +2,24 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_read_years}
 \alias{fars_read_years}
-\title{Read Accident files for years}
+\title{Load several year of FARS data files}
 \usage{
 fars_read_years(years)
 }
 \arguments{
-\item{years}{a numeric vector or list for which files need to be read}
+\item{years}{a vector of integer or strings that indicated the year of the FARS data files}
 }
 \value{
-a data frame containing Month and year of the file for each year, else a warning message
-for invalid year
+a list of FARS data for the years in the parameter \code{years}
 }
 \description{
-This function read files for series of  years and print Month and year column of the data frame
+Load several year of FARS data files
 }
 \examples{
-\dontrun{
-fars_read_years(2013)
-fars_read_years(2014)
-fars_read_years(1990)
-}
-
+  \dontrun{
+    fars_read_years(c(2013, 2014))
+    fars_read_years(c("2013", "2014"))
+  }
 
 }
 

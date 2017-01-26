@@ -2,26 +2,24 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_summarize_years}
 \alias{fars_summarize_years}
-\title{Summarize Accident over years}
+\title{Monthly number of accidents in each year using the data from FARS data}
 \usage{
 fars_summarize_years(years)
 }
 \arguments{
-\item{years}{a numeric vector or list for which files need to be read}
+\item{years}{a list of FARS data for the years in the parameter \code{years}}
 }
 \value{
-returns a key value pair of year(key) and the total number of accidents(value) in that year
+A dataframe with monthly number of accidents in each row and years as
+colunms. It uses \code{\link{fars_read_years}} function.
 }
 \description{
-This function summarize accidents over many years and return a key value pair for years and
-number of accidents in that year.Throws an error for invalid state number
+Monthly number of accidents in each year using the data from FARS data
 }
 \examples{
-\dontrun{
-fars_summarize_years(c(2013,2014))
-fars_summarize_years(2013)
-}
-
-
+  \dontrun{
+    fars_summarize_years(c(2013, 2014))
+    fars_summarize_years(c("2013", "2014"))
+  }
 }
 

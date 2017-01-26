@@ -33,12 +33,12 @@ fars_read <- function(filename) {
 #'
 #' @return an string as the name of the file
 #' @export
-#'
 #' @examples
 #' \dontrun{
-#' make_filename(2013)
-#' make_filename("2013")
-#' }
+#'  make_filename(1992)
+#'  make_filename("2012")
+#'  }
+#'
 make_filename <- function(year) {
     year <- as.integer(year)
     sprintf("accident_%d.csv.bz2", year)
@@ -59,6 +59,7 @@ make_filename <- function(year) {
 #'     fars_read_years(c(2013, 2014))
 #'     fars_read_years(c("2013", "2014"))
 #'   }
+#'
 fars_read_years <- function(years) {
     lapply(years, function(year) {
         file <- make_filename(year)
@@ -85,7 +86,6 @@ fars_read_years <- function(years) {
 #' @importFrom dplyr bind_rows group_by summarize %>%
 #' @importFrom tidyr spread
 #' @importFrom stats setNames
-#'
 #' @examples
 #'   \dontrun{
 #'     fars_summarize_years(c(2013, 2014))
@@ -123,7 +123,6 @@ fars_map_state <- function(state.num, year) {
     filename <- make_filename(year)
     data <- fars_read(filename)
     state.num <- as.integer(state.num)
-
     if (!(state.num %in% unique(data$STATE)))
         stop("invalid STATE number: ", state.num)
     data.sub <- dplyr::filter_(data, ~STATE == state.num)
@@ -138,4 +137,5 @@ fars_map_state <- function(state.num, year) {
                   xlim = range(LONGITUD, na.rm = TRUE))
         graphics::points(LONGITUD, LATITUDE, pch = 46)
     })
+
 }

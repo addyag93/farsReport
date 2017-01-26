@@ -13,8 +13,8 @@ This package has been built to visulaize US FARS (Fatality Analysis Recording Sy
 
 ##Functions present in the package are:
 
--fars_read()
--make_filename()
--fars_read_years()
--fars_summarize_years()
--fars_map_state()
+  * fars_read()
+  * make_filename()
+  * fars_read_years()
+  * fars_summarize_years()
+  * fars_map_state()

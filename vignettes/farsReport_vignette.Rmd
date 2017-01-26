@@ -1,0 +1,20 @@
+---
+title: "farsReport, an R package to analize US FARS (Fatality Analysis Recording System) data"
+author: "Aditya gupta"
+date: "26-01-2017"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction for farsReport package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This package has been built to visulaize US FARS (Fatality Analysis Recording System) data that is accomplised by the functions that read, summarize and visualize US FARS data.To do that you need to download the data files and place them in the working directory of your code.
+
+##Functions present in the package are:
+
+-fars_read()
+-make_filename()
+-fars_read_years()
+-fars_summarize_years()
+-fars_map_state()
